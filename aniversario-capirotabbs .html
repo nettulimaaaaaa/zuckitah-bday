@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aniversário da Capirota - Sente aqui comigo no sofá</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Arial+Black&display=swap');
+
+  /* Fundo com textura parede antiga */
+  body {
+    margin: 0;
+    font-family: 'Arial Black', Arial, sans-serif;
+    background: url('https://i.imgur.com/5YbUq4G.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #7B2121; /* vinho */
+    text-shadow: 1px 1px 2px #F0C3C3;
+  }
+
+  a {
+    color: #F85C4C;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Container geral */
+  .container {
+    max-width: 800px;
+    margin: 2rem auto 3rem;
+    background: rgba(255, 235, 205, 0.85);
+    border-radius: 15px;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px #D2691E;
+  }
+
+  /* Títulos grandes piscando */
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+    color: #8B0000;
+    animation: pisca 2s infinite alternate;
+    margin-bottom: 0.2rem;
+  }
+
+  @keyframes pisca {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: #9A2B2B;
+  }
+
+  /* Botão estiloso */
+  .btn-entra {
+    display: block;
+    max-width: 220px;
+    margin: 0 auto 3rem;
+    padding: 15px 25px;
+    background: linear-gradient(45deg, #E85A4F, #F8B88B);
+    border: 3px solid #B5443F;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 10px #F85C4C;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: brilho 3s infinite alternate;
+  }
+
+  .btn-entra:hover {
+    background: linear-gradient(45deg, #F85C4C, #E85A4F);
+    box-shadow: 0 0 20px #FF6F61;
+  }
+
+  @keyframes brilho {
+    0% { box-shadow: 0 0 10px #F85C4C; }
+    100% { box-shadow: 0 0 20px #FF6F61; }
+  }
+
+  /* Seção programação */
+  .programacao {
+    background: #FFCDB2;
+    border: 2px dashed #E07A5F;
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: #6B4226;
+    margin-bottom: 2rem;
+    box-shadow: inset 0 0 10px #D1A78D;
+  }
+
+  .programacao h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 1px #C25532;
+  }
+
+  .programacao p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+
+  /* Cardápio estilo boteco */
+  .cardapio {
+    background: #FFE8D6;
+    border: 3px double #B03A2E;
+    border-radius: 15px;
+    padding: 20px 25px;
+    box-shadow: 0 0 15px #DA7B59;
+    color: #6B3E26;
+    margin-bottom: 2rem;
+  }
+
+  .cardapio h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #A13B2D;
+    text-shadow: 1px 1px 2px #E88E62;
+  }
+
+  .cardapio ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .cardapio li {
+    margin: 8px 0;
+  }
+
+  /* Galeria */
+  .galeria {
+    background: #F5E6D3;
+    border-radius: 15px;
+    padding: 20px 20px;
+    margin-bottom: 2rem;
+  }
+
+  .galeria h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #A0442F;
+    text-shadow: 1px 1px 1px #D4987E;
+  }
+
+  .galeria .foto {
+    width: 100%;
+    max-width: 200px;
+    border: 4px solid #D07A50;
+    margin: 0 10px 15px 0;
+    display: inline-block;
+    box-shadow: 2px 2px 6px #B36A46;
+    border-radius: 10px;
+  }
+
+  /* Mural recados */
+  .recados {
+    background: #FFF3E0;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 2rem;
+    box-shadow: inset 0 0 15px #FFC0A0;
+  }
+
+  .recados h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #C85D3F;
+    text-shadow: 1px 1px 1px #F5A37A;
+  }
+
+  .recados p {
+    font-size: 1.1rem;
+    margin: 6px 0;
+    font-style: italic;
+    color: #7B3F28;
+  }
+
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #D97D54;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-top: 3px solid #B03A2E;
+    text-shadow: 1px 1px 1px #7B3F28;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1 class="title">💔 SENTE AQUI COMIGO NO SOFÁ… 💔</h1>
+  <h2 class="title" style="animation-delay: 0.8s">🎹 O ANIVERSÁRIO DA CAPIROTA 🎤</h2>
+  <p class="subtitle">Três dias de amor, cuscuz e Coca-Cola. Se prepare pro fricassê da saudade.</p>
+
+  <a href="#programacao" class="btn-entra">👉 ENTRA, AMOR (clica sem medo de sofrer)</a>
+
+  <section id="programacao" class="programacao">
+    <h2>📆 PROGRAMAÇÃO</h2>
+    <p><strong>20 DE JUNHO — O AQUECIMENTO DA PAIXÃO</strong><br>🏖️ Praia • 🍧 Açaí com o Trio Parada Dura (Rito, Rita & Capi)</p>
+    <p><strong>21 DE JUNHO — O GRANDE DIA DA CAPIROTA</strong><br>🏖️ Praia com o povo todo<br>🍔 Hambúrguer no Suculentos (só os fortes)</p>
+    <p><strong>22 DE JUNHO — O ALMOÇO DO REENCONTRO</strong><br>🍽️ Fricassê + macarrão + arroz + strogonoff + brigadeiro<br>⛪ Encerramento espiritual (porque a gente peca, mas reza)</p>
+  </section>
+
+  <section class="cardapio">
+    <h2>🍗 O MENU BREGA</h2>
+    <ul>
+      <li>🔥 FRICASSÊ De RITO — par come chorando , de tristesa. Kkk</li>
+      <li>🍫 BRIGADEIRO DA RITA — Pra adoçar os lanho kk </li>
+      <li>🍝 MACARRÃO DE ZUCKA (CapiS, Zucka e Nelsinha) — vá come kk  (bom que so pow)</li>
+      <li>🍚 ARROZ DA JAQUE — Porque sem arroz, nada é de verdade</li>
+      <li>🥩 STROGONOFF DA MARINA (?) — <em>A confirmar, mas a esperança é a última que morre</em></li>
+      <li>🥤 Cocas de 2L OBRIGATÓRIA para os convidados trazer.— pra empurrar tudo com classe</li>
+    </ul>
+  </section>
+
+  <section class="galeria">
+    <h2>📸 MOMENTOS DOS GATOS GAROTES 🥰😍</h2>
+    <img src="https://i.ibb.co/rRNHBSdK/IMG-0994.jpg" alt="TPD tomando açaí" class="foto" />
+  </section>
+
+  <section class="recados">
+    <h2>💌 RECADOS DE AMOR</h2>
+    <p>✍️ "Capis, parabéns, viu? Pelo aniversário Er pelo macarrão gata .💖"</p>
+    <p>✍️ “Rita, arrasou gata no brigadeiro beijos de jaque-jaquitcha!😘.”</p>
+    <p>✍️ “Se não tiver arroz, eu nem vou.”</p>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 • Feito com fricassê, glitter e muita sofrência.<br />
+  Site criado por Nega Do Ouro — a mais linda piranssitence 
+</footer>
+
+</body>
+</html>
